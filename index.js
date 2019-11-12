@@ -28,7 +28,7 @@ blogs.forEach((blog, index) => {
     divs.push( 
       '<div class="inner-div"></div><p class="blog-header">'
       +blog.header + '</p><p class="blog-descirption">'+
-      blog.description+'</p><div class="readmore-btn">Read More&nbsp; &gt;&gt;</div></div>')
+      blog.description+'</p><div class="readmore-btn">Read More&nbsp; >></div></div>')
   });
 
 const index = blogs.findIndex(x => x.current === true)
