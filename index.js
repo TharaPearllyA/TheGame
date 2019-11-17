@@ -56,3 +56,57 @@ if (index != -1) {
   blog2.innerHTML = divs[index + 1];
   blog3.innerHTML = divs[index + 2];
 }
+
+const galleryColumn1 = document.getElementById('gallery-column-1');
+const galleryColumn2 = document.getElementById('gallery-column-2');
+const galleryColumn3 = document.getElementById('gallery-column-3');
+
+const galleryImages =[
+  "https://www.w3schools.com/w3images/wedding.jpg",
+  "https://www.w3schools.com/w3images/rocks.jpg",
+  "https://www.w3schools.com/w3images/falls2.jpg",
+  "https://www.w3schools.com/w3images/paris.jpg",
+  "https://www.w3schools.com/w3images/nature.jpg",
+  "https://www.w3schools.com/w3images/mist.jpg",
+  "https://www.w3schools.com/w3images/paris.jpg",
+  "https://www.w3schools.com/w3images/falls2.jpg",
+  "https://www.w3schools.com/w3images/paris.jpg"
+];
+const column1 = [];
+const column2 = [];
+const column3 = [];
+galleryImages.map((images, index)=> {
+  if(index === 3){
+    column1.push(
+      `<span style="background-image:url(`+galleryImages[0]+`)"></span>
+      <span style="background-image:url(`+galleryImages[1]+`)"></span>
+      <span style="background-image:url(`+galleryImages[2]+`)"></span>`
+    )
+  }
+  else if(index === 6){
+    column2.push(
+      `<span style="background-image:url(`+galleryImages[3]+`)"></span>
+      <span style="background-image:url(`+galleryImages[4]+`)"></span>
+      <span style="background-image:url(`+galleryImages[5]+`)"></span>`
+    )
+  }
+  else if(index === 8){
+    column3.push(
+      `<span style="background-image:url(`+galleryImages[6]+`)"></span>
+      <span style="background-image:url(`+galleryImages[7]+`)"></span>
+      <span style="background-image:url(`+galleryImages[8]+`)"></span>`
+    )
+  }
+});
+
+if (column1.length > 0) {
+  galleryColumn1.innerHTML = column1;
+}
+if (column2.length > 0) {
+  galleryColumn2.innerHTML = column2;
+}
+if (column3.length > 0) {
+  galleryColumn3.innerHTML = column3;
+}
+
+
