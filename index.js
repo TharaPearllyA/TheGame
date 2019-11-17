@@ -4,21 +4,24 @@ import './style.css';
 const blogs = [
   {
     header: "The Begining",
-    image: "url",
+    image: "TheBegining.jpeg",
     description: "Another argument this Value is used to tell the function to use this value when executing argument function",
-    current: true
+    current: true,
+    link:"https://medium.com/@strippedthegame/the-beginning-f5ec7ef1b246"
   },
   {
     header: "",
-    image: "coming soon..",
-    description: "loreum",
-    current: false
+    image: null,
+    description: "coming soon...",
+    current: false,
+    link:"#"
   },
   {
     header: "",
-    image: "coming soon...",
-    description: "loreum",
-    current: false
+    image: null,
+    description: "coming soon...",
+    current: false,
+    link:"#"
   }
 ]
 
@@ -29,11 +32,21 @@ const blog3 = document.getElementById('blog-current-3');
 const divs = [];
 blogs.forEach((blog, index) => {
   divs.push(
-    `<div class='inner-div'></div><p class='blog-header'>`
+    `<div class='inner-div' 
+      style="background-image:url(`+blog.image+`)">
+      
+    </div>
+    <p class='blog-header'>`
     + blog.header +
-    `</p><p class='blog-descirption'>` +
-    blog.description
-    + `</p><div class='readmore-btn'>Read More&nbsp; >></div></div>`)
+    `</p>
+    <p class='blog-descirption'>` +
+    blog.description + 
+    `</p>
+    <a href='`+blog.link +`' target="_blank">
+    <div class='readmore-btn'>
+      Read More&nbsp; >>
+    </div>
+    </a>`)
 });
 
 const index = blogs.findIndex(x => x.current === true);

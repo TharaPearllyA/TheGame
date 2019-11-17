@@ -8,7 +8,7 @@ body{
   height:100%;
   padding:0;
   margin: 0;
- font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -116,27 +116,25 @@ section {
 section#story {
   flex-direction: column;
   align-items: center;
+  text-align: center;
   background-color: #21364B;
   color: #F2F2F6;
+}
+section#story h1{
+  color:#CFCDCD;
 }
 section#story > div {
   height: calc(100% - 10px);
   max-width: 800px;
   word-spacing: 1px;
-  text-align: center;
-}
-section#story h1{
-  color:#CFCDCD;
+  text-align: justify;
 }
 section#story h1 > span, 
 section#story > div > p:last-child{
   color:#FBEA00;
-}
-section#story > div{
-  height:calc(100% - 10px);
-  word-spacing: 1px;
   text-align: center;
 }
+
 /* THE BLOG SECTION */
 section#blog{
   background-color: #2B2B2B;
@@ -154,30 +152,41 @@ section#blog{
   flex-direction: column;
 }
 .inner-div {
-    height: 250px;
-    /* width: 200px; */
-    border-radius: 9px;
-    background-color: #ebf1f1;
-    background-image: url(./TheBegining.jpeg);
-    box-shadow: 9px 9px 18px rgba(0, 0, 0, 0.161);
+  height: 250px;
+  /* width: 200px; */
+  border-radius: 9px;
+  background-color: #ebf1f1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#21364B;
+  font-weight: 500;
+  box-shadow: 9px 9px 18px rgba(0, 0, 0, 0.161);
 }
 .blog-header {
-    font-size: 1.35em;
-    font-weight: 800;
-    color: #21364B;
-    margin-block-end: 0.25em;
-    min-height: 33px;
+  font-size: 1.35em;
+  font-weight: 800;
+  color: #21364B;
+  margin-block-end: 0.25em;
+  min-height: 33px;
 }
 .blog-descirption {
-    font-size: 0.85em;
-    min-height: 40px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-block-start: 0.25em;
-    margin-inline-start: 3px;
+  font-size: 0.85em;
+  min-height: 40px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-block-start: 0.25em;
+  margin-inline-start: 3px;
+}
+.outer-div > a{
+  width: fit-content;
+  align-self: flex-end;
 }
 .readmore-btn {
     align-self: flex-end;
@@ -191,66 +200,77 @@ section#blog{
 
 /* THE ABOUT SECTION */
 section#about {
-    background-color: #A5C63A;
-    color: #2B2B2B;
-    align-items: center;
-    justify-content: space-around;
+  background-color: #A5C63A;
+  color: #5C6970;
+  align-items: center;
+  justify-content: space-around;
+
 }
 .game-master {
-    height: 300px;
-    width: 250px;
-    background-color: #EBF1F1;
-    border-radius: 12px;
-    box-shadow: 9px 9px 18px rgba(0, 0, 0, 0.161);
-    color: #5C6970;
-    background-image: url(./TheGameMaster.jpg);
-    margin: 0 10px;
+  height: 300px;
+  width: 250px;
+  background-color: #EBF1F1;
+  border-radius: 12px;
+  box-shadow: 9px 9px 18px rgba(0, 0, 0, 0.161);
+  color: #ebf1f1ab;
+  background-image: url('TheGameMaster.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 10px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 21px;
+  font-weight: 600;
 }
 .game-master-contetnt {
-    max-width: 600px;
-    text-align: justify;
+  max-width: 600px;
+  text-align: justify;
 }
 /* THE CONTATC SECTION */
 section#contact {
-    background-color: #2B2B2B;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
+  background-color: #2B2B2B;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
 }
 .contact-left, .contact-right {
-    width: 30%;
-    flex: 1;
-    margin: 0 10px;
+  width: 30%;
+  flex: 1;
+  margin: 0 10px;
 }
 .contact-left > .links {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-height: 150px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 150px;
 }
 .contact-left > .links > * {
-    margin: 8px 0;
-    width: fit-content;
+  margin: 8px 0;
+  width: fit-content;
 }
 .contact-left > p {
-    display: flex;
-    flex-direction: column;
-    min-width: 100px;
-    word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+  word-wrap: break-word;
 }
 .contact-left > p > span{
   color:#525252
 }
 .contact-right > h2 {
-    color: #A5C63A;
-    letter-spacing: 3px;
+  color: #A5C63A;
+  letter-spacing: 2px;
 }
 .contact-right > h4 {
-    letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 footer {
-    background-color: #A5C63A;
-    height: 20px;
+  background-color: #9AA3A8;
+  width: 100%;
+  height: 20px;
 }
 
 /* THE GALLERY SECTION */
@@ -298,7 +318,6 @@ footer {
   border: 1px solid #A5C63A;
 }
 /* THE SUBSCRIPTION SECTION */
-/* THE SUBSCRIPTION SECTION */
 section#subscription{
   height: 550px;
   color: #3497DB;
@@ -311,7 +330,7 @@ section#subscription{
 #subscription > p{
   font-size: 20px;
   width:550px;
-  text-align:center
+  text-align:center;
 }
 .subscription-input{
   padding: 12px 24px;
@@ -345,8 +364,8 @@ input::placeholder {
   width: 50px;
   background-image: url('email-send.png');
   background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /* THE MEDIA SECTION */
@@ -397,4 +416,30 @@ section#media{
 }
 .twitter{
   background-image: url('twitter.png');
+}
+
+
+/***MEDIA QUERRIES***/
+@media screen and (max-width: 600px) {
+  section#blog,
+  section#about{
+  flex-direction: column;
+  align-items: center;
+  }
+  #subscription > p,
+  .email-request-wrapper{
+    width: 100%;
+  }
+  .subscription-input{
+    width: 150px;
+  }
+  .media-links{
+    width: 100%;
+  }
+  section#contact{
+    flex-direction: column;
+  }
+  .contact-left, .contact-right{
+    width: 100%;
+  }
 }
