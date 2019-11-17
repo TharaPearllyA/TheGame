@@ -31,6 +31,15 @@ const blog3 = document.getElementById('blog-current-3');
 
 const divs = [];
 blogs.forEach((blog, index) => {
+  let btnClass = 
+  blog.image?`<a href='`+blog.link +`' target="_blank">
+  <div class="readmore-btn">
+    Read More&nbsp; >>
+  </div>
+  </a>`: `<div class="readmore-btn-disabled">
+  Read More&nbsp; >>
+</div>` ;
+  
   divs.push(
     `<div class='inner-div' 
       style="background-image:url(`+blog.image+`)">
@@ -42,11 +51,8 @@ blogs.forEach((blog, index) => {
     <p class='blog-descirption'>` +
     blog.description + 
     `</p>
-    <a href='`+blog.link +`' target="_blank">
-    <div class='readmore-btn'>
-      Read More&nbsp; >>
-    </div>
-    </a>`)
+    `+ btnClass+`
+    `)
 });
 
 const index = blogs.findIndex(x => x.current === true);
@@ -56,6 +62,7 @@ if (index != -1) {
   blog2.innerHTML = divs[index + 1];
   blog3.innerHTML = divs[index + 2];
 }
+
 
 const galleryColumn1 = document.getElementById('gallery-column-1');
 const galleryColumn2 = document.getElementById('gallery-column-2');
