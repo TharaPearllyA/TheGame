@@ -64,6 +64,8 @@ section {
   background-size: cover;
   margin-block-start: 0.83em;
   margin-block-end: 0.83em;
+  border: 1px solid #21364B;
+  border-radius: 100px;
 }
 #intro > h2 {
   color:#9AA3A8;
