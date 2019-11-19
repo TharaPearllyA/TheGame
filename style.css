@@ -354,7 +354,7 @@ section#media{
   flex-direction: column;
   align-items: center;
   height: 600px;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 .playnow-btn{
   color: #297FB8;
